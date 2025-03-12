@@ -1,0 +1,40 @@
+{
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "memory","battery","backlight","clock"],
+    "clock": {
+        "format": "  {:%H:%M %p}"
+    },
+    "battery": {
+        "format": "{capacity}%  {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format": "   Online"
+    },
+    "backlight": {
+        "format": "{percent}%  {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "memory": {
+        "format": "{}%  "
+    },
+    "pulseaudio": {
+        "format": "{volume}%  {icon}  {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "{format_source}",
+        "format-source": "  {volume}%   ",
+        "format-source-muted": "  ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
