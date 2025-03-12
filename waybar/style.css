@@ -1,0 +1,146 @@
+/*
+*
+* Catppuccin Frappe palette
+* Maintainer: rubyowo
+*
+*/
+
+
+@define-color base   #1a1c2a;
+@define-color mantle #131521;
+@define-color crust  #0d0e17;
+
+@define-color text     #d0d4f4;
+@define-color subtext0 #9aa2cf;
+@define-color subtext1 #b0b8e3;
+
+@define-color surface0 #24273a;
+@define-color surface1 #383e57;
+@define-color surface2 #484e69;
+
+@define-color overlay0 #5c6282;
+@define-color overlay1 #6b7392;
+@define-color overlay2 #7b83a2;
+
+@define-color blue      #7092e2;
+@define-color lavender  #9fa7e5;
+@define-color sapphire  #6faac8;
+@define-color sky       #7fbac9;
+@define-color teal      #68a89e;
+@define-color green     #8ab972;
+@define-color yellow    #d4aa60;
+@define-color peach     #db865c;
+@define-color maroon    #c4777a;
+@define-color red       #cf5e62;
+@define-color mauve     #ae7cd4;
+@define-color pink      #da95c4;
+@define-color flamingo  #d08a8c;
+@define-color rosewater #e4b9b2;
+
+* {
+  font-family: FantasqueSansMono Nerd Font;
+  font-size: 14px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 2px 0; /* Reduced vertical margin */
+}
+
+#workspaces {
+    border-radius: 1rem;
+    margin: 2px; /* Reduced space */
+    background-color: @surface0;
+    margin-left: 0.5rem;
+}
+
+#workspaces button {
+    color: @lavender;
+    border-radius: 1rem;
+    padding: 0.3rem;
+}
+
+#workspaces button.active {
+    color: @text;
+    background-color: @overlay1; /* Darker than @blue */
+    border-radius: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 6px 1px @overlay1;
+    transition: all 0.2s ease-in-out;
+}
+  
+  
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#network,
+#memory,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power {
+  background-color: @surface0;
+  padding: 0.3rem 0.8rem; /* Reduced padding */
+  margin: 2px 0; /* Reduced vertical margin */
+}
+
+#clock {
+  color: @blue;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 0.5rem;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight, #battery {
+    border-radius: 0;
+}
+
+#pulseaudio {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 0.5rem;
+}
+
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
+#custom-lock {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @lavender;
+}
+
+#custom-power {
+    margin-right: 0.5rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @red;
+}
+
+#tray {
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+}
